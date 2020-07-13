@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Inject } from '@angular/core';
 import { PizzaImgService } from '../../services/pizza-img.service';
+import { ENVIRONMENT, environment } from 'src/app/core/env/env.provider';
 
 @Component({
   selector: 'ps-pizza-info',
@@ -8,9 +9,13 @@ import { PizzaImgService } from '../../services/pizza-img.service';
 })
 export class PizzaInfoComponent {
   @Input() pizza;
-  constructor(private pizzaImgService: PizzaImgService) {}
+  constructor(
+    private pizzaImgService: PizzaImgService,
+    @Inject(ENVIRONMENT) private env: environment
+  ) {}
   getImg() {
-    return this.pizzaImgService.calculate(this.pizza.img);
+    return  this.env.serverURL + this.pizza.img;
+    //return this.pizzaImgService.calculate(this.pizza.img);
   }
   shouldPrintDivider(i: number) {
     return i < this.pizza.ingredients.length - 1;
