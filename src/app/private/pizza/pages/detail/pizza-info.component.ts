@@ -1,6 +1,6 @@
 import { Component, Input, Inject } from '@angular/core';
 import { PizzaImgService } from '../../services/pizza-img.service';
-import { ENVIRONMENT, environment } from 'src/app/core/env/env.provider';
+
 
 @Component({
   selector: 'ps-pizza-info',
