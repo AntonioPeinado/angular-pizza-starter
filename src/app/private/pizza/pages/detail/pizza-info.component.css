@@ -1,0 +1,28 @@
+.pizza-info {
+  padding: var(--ps-padding-medium);
+}
+.pizza-info__header {
+  justify-content: center;
+  background-color: var(--ps-color-primary);
+  color: var(--ps-color-on-primary);
+}
+.pizza-info__ingredients {
+  margin-left: var(--ps-margin-medium);
+}
+
+.pizza-info__ingredients__title {
+  font-size: var(--ps-font-size);
+}
+.pizza-info__ingredient {
+  justify-content: space-between;
+  width: 100%;
+}
+.pizza-info__total__divider {
+  border-color: var(--ps-color-primary)
+}
+.pizza-info__total {
+  text-align: end;
+  color: var(--ps-color-primary);
+  font-size: var(--ps-font-medium);
+  line-height: initial;
+}
