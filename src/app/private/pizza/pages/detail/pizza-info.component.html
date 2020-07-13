@@ -1,0 +1,26 @@
+<div class="horizontal pizza-info">
+  <mat-card class="pizza-info__card">
+    <mat-card-header class="horizontal pizza-info__header">
+      <mat-card-title>
+        <h2>Pizza {{pizza.name}}</h2>
+      </mat-card-title>
+    </mat-card-header>
+    <img [src]="getImg()" mat-card-img alt="">
+  </mat-card>
+  <div class="pizza-info__ingredients one vertical">
+    <p class="pizza-info__ingredients__title">Ingredients:</p>
+    <mat-list role="list" >
+      <ng-container *ngFor="let ingredient of pizza.ingredients; let i = index">
+        <mat-list-item  role="listitem">
+          <span class="horizontal pizza-info__ingredient">
+            <span>{{ingredient.name}}</span>
+            <span>{{ingredient.prize}}</span>
+          </span>
+        </mat-list-item>
+        <mat-divider *ngIf="shouldPrintDivider(i)"></mat-divider>
+      </ng-container>
+    </mat-list>
+    <mat-divider class="pizza-info__total__divider"></mat-divider>
+    <div class="pizza-info__total">{{getPrice()}}</div>
+  </div>
+</div>

@@ -1,12 +1,29 @@
 .pizza-list {
   list-style: none;
   display:grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr ;
   grid-gap: 1rem;
   justify-content: space-around;
   margin-bottom: var(--ps-margin-medium);
+  width: 80%;
+
+
+
 }
 
 .pizza-list__item {
   cursor: pointer;
+  margin-left: 7rem;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.58);
+}
+.pizza-list__card{
+width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: var(--ps-margin-small);
+    padding-top: var(--ps-padding-small);
+    padding-bottom: var(--ps-padding-small);
+    background-color: var(--ps-color-primary);
+    color: var(--ps-color-text-secondary);
+    color: var(--ps-color-on-primary);
 }

@@ -1,7 +1,7 @@
 <ul class='pizza-list'>
   <li *ngFor="let pizza of pizzas" class='pizza-list__item'>
      <mat-card (click)="onPizzaClick(pizza)" tabindex="0">
-      <mat-card-header >
+      <mat-card-header class='pizza-list__card'>
         <mat-card-title>
           {{pizza.name}}
         </mat-card-title>
