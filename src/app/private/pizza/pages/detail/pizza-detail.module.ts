@@ -7,9 +7,10 @@ import { CommonModule } from '@angular/common';
 import { PizzaDetailComponent } from './pizza-detail.component';
 import { CommentListModule } from 'src/app/private/comment/components/list/comment-list.module';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { PizzaInfoComponent } from './pizza-info.component';
 
 @NgModule({
-  declarations: [PizzaDetailComponent],
+  declarations: [PizzaDetailComponent, PizzaInfoComponent],
   imports: [
     CommonModule,
     CommentListModule,
@@ -17,7 +18,7 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     MatListModule,
     MatDividerModule,
     PizzaDetailRoutingModule,
-    MatProgressSpinnerModule
-  ]
+    MatProgressSpinnerModule,
+  ],
 })
-export class PizzaDetailModule { }
+export class PizzaDetailModule {}
