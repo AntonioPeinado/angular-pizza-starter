@@ -10,12 +10,9 @@ import { ENVIRONMENT, environment } from 'src/app/core/env/env.provider';
 export class PizzaInfoComponent {
   @Input() pizza;
   constructor(
-    private pizzaImgService: PizzaImgService,
-    @Inject(ENVIRONMENT) private env: environment
-  ) {}
+    private pizzaImgService: PizzaImgService ) {}
   getImg() {
-    return  this.env.serverURL + this.pizza.img;
-    //return this.pizzaImgService.calculate(this.pizza.img);
+    return this.pizzaImgService.calculate(this.pizza.img);
   }
   shouldPrintDivider(i: number) {
     return i < this.pizza.ingredients.length - 1;
